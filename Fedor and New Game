@@ -1,0 +1,20 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	int n,m,k,m1,diff,ans=0,cfa=0;
+	cin>>n>>m>>k;
+	int arr[m];
+	for(int i=0;i<m;i++)cin>>arr[i];
+	cin>>m1;
+	for(int i=0;i<m;i++){
+		diff=m1^arr[i];
+		while(diff!=0){
+			diff=diff&(diff-1);
+			ans++;
+		}
+		if(ans<=k)cfa++;
+		ans=0;
+	}
+	cout<<cfa<<endl;
+	return 0;
+}
