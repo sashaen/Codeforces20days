@@ -13,7 +13,10 @@ int main(){
 		out=min(b[i],out); // for choosing the least no, of final pt of player..
 		
 	}
-	if(in<out){
+	if(in>out)
+	 cout<<-1;
+	 
+	else {
 		if(m>=in && m<=out)cout<<0<<endl;
 		else{
 		int o,p;
@@ -21,6 +24,6 @@ int main(){
 		p=abs(m-out);
 		cout<<min(o,p)<<endl;}
 	}
-	else cout<<-1;
+
 	return 0;
 }
